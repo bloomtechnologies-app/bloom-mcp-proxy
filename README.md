@@ -15,3 +15,4 @@ Universal MCP (Model Context Protocol) wrapper that adds Bloom authentication an
 
 ```bash
 npm install -g bloom-mcp-proxy
+```
