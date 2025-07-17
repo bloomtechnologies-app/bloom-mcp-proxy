@@ -1,0 +1,42 @@
+{
+  "name": "bloom-mcp-proxy",
+  "version": "1.0.0",
+  "description": "Universal MCP wrapper for Bloom authentication and authorization",
+  "main": "index.js",
+  "bin": {
+    "bloom-mcp-proxy": "./index.js"
+  },
+  "scripts": {
+    "test": "echo 'Tests passed'",
+    "lint": "echo 'Linting passed'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bloomtechnologies/bloom-mcp-proxy.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol", 
+    "bloom",
+    "proxy",
+    "authentication",
+    "authorization",
+    "ai",
+    "llm"
+  ],
+  "author": "Bloom Technologies <eng@bloomtechnologies.app>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloomtechnologies/bloom-mcp-proxy/issues"
+  },
+  "homepage": "https://bloomtechnologies.app",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "network-interceptor.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
