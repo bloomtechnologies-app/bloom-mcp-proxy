@@ -1,6 +1,6 @@
 {
   "name": "bloom-mcp-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Universal MCP wrapper for Bloom authentication and authorization",
   "main": "index.js",
   "bin": {
@@ -16,7 +16,7 @@
   },
   "keywords": [
     "mcp",
-    "model-context-protocol", 
+    "model-context-protocol",
     "bloom",
     "proxy",
     "authentication",
