@@ -1,42 +1,43 @@
 {
-  "name": "bloom-mcp-proxy",
+  "name": "bloom-mcp-wrapper",
   "version": "1.0.1",
-  "description": "Universal MCP wrapper for Bloom authentication and authorization",
-  "main": "index.js",
+  "description": "Universal wrapper for MCP servers to route API calls through Bloom proxy with automatic npm/file detection",
+  "main": "bloom-wrapper.js",
   "bin": {
-    "bloom-mcp-proxy": "./index.js"
+    "bloom-wrapper": "bloom-wrapper.js"
   },
   "scripts": {
-    "test": "echo 'Tests passed'",
-    "lint": "echo 'Linting passed'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bloomtechnologies-app/bloom-mcp-proxy.git"
+    "test": "node test/test-basic.js",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "mcp",
-    "model-context-protocol",
-    "bloom",
+    "model-context-protocol", 
     "proxy",
-    "authentication",
-    "authorization",
+    "bloom",
+    "wrapper",
+    "claude",
     "ai",
-    "llm"
+    "anthropic"
   ],
-  "author": "Bloom Technologies <eng@bloomtechnologies.app>",
+  "author": "Bloom Technologies",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bloomtechnologies-app/bloom-mcp-proxy/issues"
-  },
-  "homepage": "https://bloomtechnologies.app",
+  "dependencies": {},
   "engines": {
     "node": ">=14.0.0"
   },
   "files": [
-    "index.js",
-    "network-interceptor.js",
-    "README.md",
-    "LICENSE"
-  ]
+    "bloom-wrapper.js",
+    "bloom-proxy-loader.js",
+    "examples/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloomtechnologies-app/bloom-mcp-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bloomtechnologies-app/bloom-mcp-proxy/issues"
+  },
+  "homepage": "https://github.com/bloomtechnologies-app/bloom-mcp-proxy#readme"
 }

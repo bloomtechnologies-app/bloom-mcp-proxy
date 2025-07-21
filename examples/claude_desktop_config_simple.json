@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "github-proxied": {
+      "command": "bloom-wrapper",
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "BLOOM_AUTH": "your-bloom-auth-token",
+        "DEBUG": "bloom"
+      }
+    },
+    "firecrawl-proxied": {
+      "command": "bloom-wrapper", 
+      "args": ["firecrawl-mcp"],
+      "env": {
+        "BLOOM_AUTH": "your-bloom-auth-token",
+        "DEBUG": "bloom"
+      }
+    },
+    "filesystem-proxied": {
+      "command": "bloom-wrapper",
+      "args": ["@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "BLOOM_AUTH": "your-bloom-auth-token"
+      }
+    },
+    "custom-local-server": {
+      "command": "bloom-wrapper",
+      "args": ["./my-custom-mcp-server.js"],
+      "env": {
+        "BLOOM_AUTH": "your-bloom-auth-token"
+      }
+    }
+  }
+}

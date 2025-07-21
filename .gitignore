@@ -1,8 +1,37 @@
+# Dependencies
 node_modules/
-*.log
-.DS_Store
-.env
 npm-debug.log*
-.npm
-*.tgz
-test.js
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/

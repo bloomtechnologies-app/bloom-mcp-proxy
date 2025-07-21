@@ -1,0 +1,40 @@
+{
+    "mcpServers": {
+      "github-proxied": {
+        "command": "bloom-mcp-wrapper",
+        "args": ["@modelcontextprotocol/server-github"],
+        "env": {
+          "BLOOM_AUTH": "bloom_org_your-org-key_agent_your-agent-id",
+          "BLOOM_PROXY": "http://localhost:8000",
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_your_github_token"
+        }
+      },
+      "filesystem-proxied": {
+        "command": "bloom-mcp-wrapper",
+        "args": ["@modelcontextprotocol/server-filesystem"],
+        "env": {
+          "BLOOM_AUTH": "bloom_org_your-org-key_agent_your-agent-id",
+          "BLOOM_PROXY": "http://localhost:8000"
+        }
+      },
+      "slack-proxied": {
+        "command": "bloom-mcp-wrapper",
+        "args": ["@modelcontextprotocol/server-slack"],
+        "env": {
+          "BLOOM_AUTH": "bloom_org_your-org-key_agent_your-agent-id",
+          "BLOOM_PROXY": "http://localhost:8000",
+          "SLACK_BOT_TOKEN": "xoxb-your-slack-token"
+        }
+      },
+      "custom-api-proxied": {
+        "command": "bloom-mcp-wrapper",
+        "args": ["/path/to/your/custom-mcp-server.js"],
+        "env": {
+          "BLOOM_AUTH": "bloom_org_your-org-key_agent_your-agent-id",
+          "BLOOM_PROXY": "http://localhost:8000",
+          "CUSTOM_API_KEY": "your-api-key",
+          "DEBUG": "bloom:*"
+        }
+      }
+    }
+  }

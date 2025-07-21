@@ -1,11 +1,6 @@
 test/
+node_modules/
 .git/
 .gitignore
-.eslintrc*
 *.log
 .DS_Store
-node_modules/
-.env
-*.test.js
-examples/
-docs/
