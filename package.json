@@ -1,6 +1,6 @@
 {
   "name": "bloom-mcp-wrapper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Universal wrapper for MCP servers to route API calls through Bloom proxy with automatic npm/file detection",
   "main": "bloom-wrapper.js",
   "bin": {
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "mcp",
-    "model-context-protocol", 
+    "model-context-protocol",
     "proxy",
     "bloom",
     "wrapper",
