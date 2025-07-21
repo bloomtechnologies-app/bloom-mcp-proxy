@@ -22,22 +22,22 @@ Simply replace your MCP server command with `bloom-wrapper` in your Claude Deskt
 {
   "mcpServers": {
     "github": {
-      "command": "bloom-wrapper",
-      "args": ["@modelcontextprotocol/server-github"],
+      "command": "npx",
+      "args": ["-y", "bloom-mcp-wrapper", "@modelcontextprotocol/server-github"],
       "env": {
         "BLOOM_AUTH": "your-bloom-auth-token"
       }
     },
     "firecrawl": {
-      "command": "bloom-wrapper",
-      "args": ["firecrawl-mcp"],
+      "command":"npx",
+      "args": ["-y", "bloom-mcp-wrapper", "firecrawl-mcp"],
       "env": {
         "BLOOM_AUTH": "your-bloom-auth-token"
       }
     },
     "custom-local": {
-      "command": "bloom-wrapper",
-      "args": ["./my-custom-mcp-server.js"],
+      "command": "npx",
+      "args": ["-y", "bloom-mcp-wrapper", "./my-custom-mcp-server.js"],
       "env": {
         "BLOOM_AUTH": "your-bloom-auth-token"
       }
