@@ -99,16 +99,15 @@ bloom-wrapper /absolute/path/to/server.js
 DEBUG=bloom bloom-wrapper @modelcontextprotocol/server-github
 ```
 
-## Supported Services
+## Environment Variables
 
-The wrapper automatically detects and routes requests for:
-- GitHub (`api.github.com`)
-- OpenAI (`api.openai.com`) 
-- Anthropic (`api.anthropic.com`)
-- Google (`googleapis.com`)
-- Firecrawl (`api.firecrawl.dev`)
-- Serper (`api.serper.dev`)
-- And many more...
+### Required Variables
+- `BLOOM_AUTH`: Your Bloom authentication token
+- `MCP_SERVICE_NAME`: The service name for permission checking (e.g., "github", "google_maps", "firecrawl")
+
+### Optional Variables
+- `BLOOM_PROXY`: Proxy URL (defaults to Bloom API)
+- `DEBUG`: Set to "bloom" for debug logging
 
 ## License
 

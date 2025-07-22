@@ -43,30 +43,18 @@ function debug(msg) {
 
 debug(`Initializing - Agent: ${agentId}, Proxy: ${BLOOM_PROXY}`);
 
-// Service name mappings
-const serviceMappings = {
-  'api.github.com': 'github',
-  'github.com': 'github',
-  'api.openai.com': 'openai',
-  'api.anthropic.com': 'anthropic',
-  'googleapis.com': 'google',
-  'google.serper.dev': 'serper',
-  'api.serper.dev': 'serper',
-  'slack.com': 'slack',
-  'api.slack.com': 'slack',
-  'api.firecrawl.dev': 'firecrawl',
-  'firecrawl.dev': 'firecrawl'
-};
+// Get service name from environment variable or use a default
+const MCP_SERVICE_NAME = process.env.MCP_SERVICE_NAME;
 
 function extractServiceName(hostname) {
-  for (const [pattern, service] of Object.entries(serviceMappings)) {
-    if (hostname.includes(pattern)) {
-      return service;
-    }
+  // Use environment variable if provided
+  if (MCP_SERVICE_NAME) {
+    return MCP_SERVICE_NAME;
   }
-  // Default to first part of hostname
-  const parts = hostname.split('.');
-  return parts[0] === 'api' && parts.length > 1 ? parts[1] : parts[0];
+  
+  // Otherwise, use a generic name
+  // The backend should be updated to not require specific service names
+  return 'mcp';
 }
 
 // Store original methods
@@ -159,7 +147,8 @@ function createInterceptor(originalMethod, protocol) {
       headers: {
         ...requestOptions.headers,
         'X-Original-Host': hostname,
-        'X-Service-Name': serviceName
+        'X-Service-Name': serviceName,
+        'X-MCP-Service': serviceName
       }
     };
     

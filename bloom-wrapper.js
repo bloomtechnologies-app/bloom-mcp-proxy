@@ -113,7 +113,8 @@ const childEnv = {
   NODE_OPTIONS: `${process.env.NODE_OPTIONS || ''} --require ${loaderPath}`.trim(),
   BLOOM_AUTH,
   BLOOM_PROXY,
-  DEBUG
+  DEBUG,
+  MCP_SERVICE_NAME: process.env.MCP_SERVICE_NAME
 };
 
 // Add dummy API keys for common services if not already set
