@@ -16,7 +16,7 @@ npm install -g bloom-mcp-wrapper
 
 ## Quick Start
 
-Simply replace your MCP server command with `bloom-wrapper` in your Claude Desktop configuration:
+Add MCP servers to your Claude Desktop configuration using `bloom-mcp-wrapper`:
 
 ```json
 {
@@ -25,21 +25,24 @@ Simply replace your MCP server command with `bloom-wrapper` in your Claude Deskt
       "command": "npx",
       "args": ["-y", "bloom-mcp-wrapper", "@modelcontextprotocol/server-github"],
       "env": {
-        "BLOOM_AUTH": "your-bloom-auth-token"
+        "BLOOM_AUTH": "your-bloom-auth-token",
+        "MCP_SERVICE_NAME": "github"
       }
     },
     "firecrawl": {
       "command":"npx",
       "args": ["-y", "bloom-mcp-wrapper", "firecrawl-mcp"],
       "env": {
-        "BLOOM_AUTH": "your-bloom-auth-token"
+        "BLOOM_AUTH": "your-bloom-auth-token",
+        "MCP_SERVICE_NAME": "firecrawl"
       }
     },
     "custom-local": {
       "command": "npx",
       "args": ["-y", "bloom-mcp-wrapper", "./my-custom-mcp-server.js"],
       "env": {
-        "BLOOM_AUTH": "your-bloom-auth-token"
+        "BLOOM_AUTH": "your-bloom-auth-token",
+        "MCP_SERVICE_NAME": "custom"
       }
     }
   }
